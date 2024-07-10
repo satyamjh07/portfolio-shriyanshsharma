@@ -120,24 +120,26 @@ nav ul li a:hover {
     margin: auto;
     padding: 2rem;
 }
-.container .btn {
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
+.btn-container {
     text-align: center;
+    margin: 1rem 0;
+}
+
+.btn {
+    display: inline-block;
     background: var(--accent-color);
     color: var(--light-color);
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
-    border: none;
-    cursor: pointer;
 }
 
-.container .btn:hover {
+.btn:hover {
     background: #c0392b; /* Darker shade of accent color */
+    text-decoration: none; /* Ensure no underline on hover */
 }
+
 
 #mentorship .btn,
 #youtube .btn {
