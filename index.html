@@ -11,12 +11,16 @@
     <header>
         <div class="container">
             <h1>SHRIYANSH SHARMA</h1>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#mentorship">Mentorship</a></li>
-                    <li><a href="#youtube">YouTube</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -32,12 +36,15 @@
     </section>
 
     <section id="about" class="container">
-        <h2>WHO AM I?</h2>
+        <h2>WHO WE ARE?</h2>
         <div class="about-content">
-            <img src="IMG-20240710-WA0004.jpg" alt="Shriyansh Sharma" class="profile-img">
+            <div>
+            <img src="Shriyanshimg.jpg" alt="Shriyansh Sharma" class="profile-img">
+                <h3>SHRIYANSH SHARMA</h3> 
+            </div>
             <ul>
                 <li>1st-year student at Delhi Technological University (DTU).</li>
-                <li>Achieved 98.89 percentile in JEE Mains(18k rank) and qualified JEE Advanced.</li>
+                <li>Achieved 98.89 percentile in JEE Mains and 18,000 rank in JEE Advanced.</li>
                 <li>Passionate about entrepreneurship and building a business venture.</li>
                 <li>Runs a YouTube channel to share insights on various topics and engage with a growing audience.</li>
                 <li>Offers mentorship programs for JEE aspirants, leveraging personal experiences to guide and support them.</li>
@@ -45,6 +52,22 @@
                 <li>Believes in the power of education to transform lives and dedicated to making a positive impact.</li>
             </ul>
         </div>
+        <div class="about-content">
+            <div>
+            <img src="Advaitimg.jpg" alt="advait" class="profile-img">
+                <h3 style="margin-left: 2rem;">ADVAIT SINGH</h3> 
+            </div>
+                <ul>
+                    <li>I don't believe in the conventional studying methodologies that students follow, which I discovered were very lacking as I went through my prep.</li>
+                    <li>I really enjoy expanding my worldview and ingesting new knowledge from different topics.</li>
+                    <li>I am very passionate about entrepreneurship and being a person of power.</li>
+                    <li>I thrive on challenges and am always looking for innovative solutions to problems.</li>
+                    <li>I believe in continuous self-improvement and strive to be better every day.</li>
+                    <li>My goal is to inspire others and create a positive impact through my ventures.</li>
+                </ul>
+
+        </div>
+
     </section>
 
     <section id="mentorship" class="container">
@@ -62,54 +85,81 @@
         <div class="btn-container">
             <a href="https://t.me/jeeadvancednerds" class="btn" target="_blank" rel="noopener noreferrer">Join Our Telegram Group</a>
         </div>
-        <h2>Student Feedback</h2>
+        <h2>STUDENT FEEDBACK</h2>
         <div class="feedback-card" id="feedback-card">
             <p id="feedback-text">This mentorship program is amazing! It really helped me improve my scores.</p>
             <p id="student-name" class="student-name">- John Doe</p>
         </div>
         <div class="btn-container">
-        <a href="https://chat.whatsapp.com/ERJjfiiyLwj7A19Q8KtALG" class="btn">Join the Program</a>
+        <a href="#contact" class="btn">Join the Program</a>
         </div>
     </section>
-
-    <section id="youtube" class="container">
-        <h2>YOUTUBE CHANNEL</h2>
-        <div class="about-content">
-        <img src="youtuber.jpeg" alt="youtuber clipart" class="profile-img">
-        <ul>
-            <li>Engaging content focused on academic excellence and personal growth.</li>
-            <li>Provides tips on cracking competitive exams like JEE Mains and Advanced.</li>
-            <li>Delves into challenging concepts and solves problems together.</li>
-            <li>Discusses strategies to ace exams and offers career guidance.</li>
-            <li>Regular updates covering a wide range of subjects including mathematics, physics, and innovative study techniques.</li>
-            <li>Aims to make learning enjoyable and effective through detailed tutorials and real-life examples.</li>
-        </ul>
+    
+<section id="comparison" class="comparison-section">
+    <div class="container">
+        <div class="comparison-container">
+            <div class="comparison-box">
+                <h3>What You'll Get in Paid Mentorship</h3>
+                <ul>
+                    <li>Personalized study plans</li>
+                    <li>One-on-one mentoring sessions</li>
+                    <li>Exclusive study materials</li>
+                    <li>Priority support</li>
+                    <li>Mock tests and performance analysis</li>
+                </ul>
+            </div>
+            <div class="comparison-box">
+                <h3>What You'll Get in Free Mentorship</h3>
+                <ul>
+                    <li>Access to community forums</li>
+                    <li>Group mentoring sessions</li>
+                    <li>Basic study materials</li>
+                    <li>Email support</li>
+                    <li>Weekly progress checks</li>
+                </ul>
+            </div>
         </div>
-        <div class="btn-container">
-        <a href="your-youtube-channel-link" class="btn">Visit My YouTube Channel</a></div>
-    </section>
-
-    <section id="contact" class="container">
-        <h2>Contact</h2>
-        <form name="contact" method="POST" netlify>
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <footer>
+    </div>
+</section>
+    <section id="mentorshipneed" class="mentorship-need">
         <div class="container">
-            <p>&copy; 2024 Shriyansh Sharma. All Rights Reserved.</p>
+            <img src="mentorshipimg.png" alt="mentorship-graphic" class="mentorship-img">
+        </div>
+    </section>
+       <div class="contact-footer-section">
+    <div class="contact-box">
+        <h2>Contact</h2>
+        <form netlify>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+                   <input type="number" placeholder="9717******" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+            <p style="color: white; font-size: 0.9rem;">AFTER FILLING THIS FORM OUR TEAM WILL REACH OUT TO YOU SOON</p>
+        </form>
+    </div>
+    <div class="footer-box">
+        <div class="footer-content">
+            <nav>
+                <ul style="display: flex; flex-direction: column;">
+                    <p>QUICK LINKS:</p>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#mentorship">Mentorship</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
             <div class="social-links">
                 <a href="https://www.instagram.com/your_instagram_username/" target="_blank" rel="noopener noreferrer">
                     <img src="Instagram_icon.png" alt="Instagram">
                 </a>
-                <!-- Add more social media links if needed -->
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                    <img src="Youtube-logo.png" alt="youtube">
+                </a>
             </div>
+             <p>&copy; 2024 Shriyansh Sharma. All Rights Reserved.</p>
         </div>
-    </footer>
+    </div>
+</div>
 
 
     <script src="script.js"></script>
