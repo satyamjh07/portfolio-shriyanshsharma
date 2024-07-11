@@ -63,3 +63,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the first feedback
     updateFeedback();
 });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = nav.contains(event.target);
+        const isClickInsideToggle = menuToggle.contains(event.target);
+        
+        if (!isClickInsideMenu && !isClickInsideToggle) {
+            nav.classList.remove('active');
+        }
+    });
