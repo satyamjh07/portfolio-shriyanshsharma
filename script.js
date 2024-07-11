@@ -43,7 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "The interactive sessions and problem sheets were incredibly helpful for my preparation.", name: "Satyam Nagar" },
         { text: "Thanks to the mentorship program, I was able to understand difficult concepts much better.", name: "Abhishek Sharma" },
         { text: "The personalized support and advice really made a difference in my studies.", name: "Shivani" },
-        { text: "nice", name: "Avhi Chatterjee" }
+        { text: "nice", name: "Avhi Chatterjee" },
+        { text: "Productivity📈", name: "Debojeet"},
+        {text: "sab badhiyan hai", name: "Aaditya Jha"},
+        {text: "Going Really Well, won't overexpress lol", name: "Harsh Vashist"},
+        {text: "Currently I can not fully utilise it but trying to do so Overall This is a booster for my jee prep and for becoming best version of myself.", name: "Sachin bansal"},
+        {text: "Mentorship program is so good it gives all the tips for clearing jee mains and advanced with that tips i am seeing massivly improvement in my academic and my mock test marks increasing it help us lot especially it is free and if it is paid i will buy if i knew what goods i wil get from them", name: "Ashutosh Baranwal"}
     ];
 
     let currentFeedbackIndex = 0;
