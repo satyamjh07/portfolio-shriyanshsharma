@@ -1,6 +1,6 @@
 :root {
     --primary-color: #3498db; /* Primary color */
-    --secondary-color: #ffffff; /* Secondary color */
+    --secondary-color: #e8e8e8; /* Secondary color */
     --accent-color: #e74c3c; /* Accent color */
     --light-color: #ecf0f1; /* Light color */
     --dark-color: #000000; /* Dark color */
@@ -80,7 +80,7 @@ nav ul li a:hover {
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background: var(--light-color);
+    background: var(--secondary-color);
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -455,6 +455,7 @@ ul li::before {
     }
 }
 
+/* Feedback section */
 .feedback-section {
     margin-top: 2rem;
     text-align: center;
@@ -463,7 +464,7 @@ ul li::before {
 .feedback-card {
     background: var(--light-color);
     color: var(--dark-color);
-    padding: 0.5rem;
+    padding: 1.5rem; /* Increased padding for better spacing */
     margin: 1rem auto;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgb(255, 255, 255, 0.1);
@@ -471,6 +472,8 @@ ul li::before {
     position: relative;
     font-size: 1.25rem;
     line-height: 1.5;
+    word-wrap: break-word; /* Ensures text doesn't overflow */
+    overflow-wrap: break-word; /* Ensures text doesn't overflow */
 }
 
 .feedback-card::after {
@@ -488,12 +491,36 @@ ul li::before {
 
 .feedback-name {
     margin-top: 1rem;
-    font-size: 	1rem;
+    font-size: 1rem;
     font-style: italic;
     text-align: right;
     color: var(--secondary-color);
+    word-wrap: break-word; /* Ensures text doesn't overflow */
+    overflow-wrap: break-word; /* Ensures text doesn't overflow */
 }
+/* Add this to your existing CSS file */
+#welcome-message {
+    font-size: 2rem;
+    color: var(--light-color);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid orange; /* Adjust color as needed */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange; /* Adjust color as needed */
+    }
+}
+
 @media (max-width: 768px) {
+    header{
+        position: relative;
+    }
     .menu-toggle {
         display: flex;
     }
@@ -504,7 +531,7 @@ ul li::before {
         position: absolute;
         top: 60px;
         left: -100%;
-        background: var(--secondary-color);
+        background: #0b0259;
         transition: 0.3s;
         z-index: 1000;
     }
@@ -517,8 +544,20 @@ ul li::before {
         text-align: center;
         margin: 1rem 0;
     }
+
+    .feedback-card {
+        width: 100%;
+        height: 40vh;
+        padding: 1rem; /* Adjusted padding for mobile view */
+        word-wrap: break-word; /* Ensures text doesn't overflow */
+        overflow-wrap: break-word; /* Ensures text doesn't overflow */
+        font-size: 0.8rem; /* Adjusted font size for mobile view */
+    }
+
     .feedback-name {
         margin-top: 1rem;
-        font-size: 0.8rem;
+        font-size: 0.5rem; /* Adjusted font size for mobile view */
+        word-wrap: break-word; /* Ensures text doesn't overflow */
+        overflow-wrap: break-word; /* Ensures text doesn't overflow */
     }
 }
