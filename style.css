@@ -19,7 +19,7 @@ html {
 
 body {
     font-family: var(--font-main);
-    background: var(--light-color);
+    background: #dedede;
     color: var(--dark-color);
     line-height: 1.6;
     margin: 0;
@@ -29,7 +29,7 @@ body {
 header {
     background: var(--secondary-color);
     color: var(--light-color);
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -67,6 +67,26 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--accent-color);
+}
+
+/* New CSS for responsive header */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--light-color);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+nav {
+    display: flex;
 }
 
 .hero-section {
@@ -134,6 +154,7 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
+    margin: 0.5rem;
 }
 
 #mentorship .btn:hover,
@@ -147,15 +168,22 @@ h2 {
     color: var(--secondary-color);
     text-align: center;
 }
-
+/* #ffabab, #adffff */
 .about-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-        background: #bffffd;
+    background: linear-gradient(135deg, #ffabab, #adffff);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .profile-img {
@@ -204,62 +232,175 @@ ul li::before {
     font-style: italic;
     color: var(--dark-color);
 }
+.comparison-section {
+    background: #dedede;
+    padding: 3rem 0;
+    text-align: center;
+}
 
-form {
+.comparison-section h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.comparison-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-form input,
-form textarea,
-form button {
-    padding: 0.75rem;
+.comparison-box {
+    background: linear-gradient(135deg, #ffabab, #adffff);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+}
+
+.comparison-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.comparison-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    position: relative;
+}
+
+.comparison-box h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 0.5rem auto;
+}
+
+.comparison-box ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.comparison-box ul li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--dark-color);
+}
+
+.comparison-box ul li::before {
+    content: '✓';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.mentorship-need {
+    width: 100%;
+}
+.mentorship-img {
+    border-radius: 1rem;
+    width: 100%;
+    height: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.mentorship-img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5);
+}
+.contact-footer-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: var(--dark-color);
+    border-top: 3px solid var(--secondary-color);
+}
+.contact-box {
+    border: 0.2rem solid var(--accent-color);
+}
+.contact-box, .footer-box {
+    background: var(--dark-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--dark-color);
+}
+
+.contact-box h2, .footer-box p {
+    margin-bottom: 1rem;
+    color: var(--light-color);
+}
+
+.contact-box form input, .contact-box form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.4rem;
     border: 1px solid var(--dark-color);
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    background: #f9f9f9;
 }
 
-form button {
+.contact-box form button {
     background: var(--accent-color);
     color: var(--light-color);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.4rem;
     cursor: pointer;
     transition: background 0.3s;
+    font-size: 1.2rem;
 }
 
-form button:hover {
-    background: #c0392b; /* Darker shade of accent color */
+.contact-box form button:hover {
+    background: #c0392b;
 }
 
-footer {
-    background: var(--secondary-color);
-    color: var(--light-color);
-    text-align: center;
-    padding: 1rem 0;
-}
-
-footer .container {
+.footer-box .footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
-footer p {
-    margin: 0.5rem 0;
+.footer-box .social-links {
+    display: flex;
+}
+
+.footer-box .social-links a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-box .social-links a img:hover {
+    transform: scale(1.1);
 }
 
 .social-links {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 5rem;
+    
 }
-
+.social-links a:hover{
+    text-decoration: underline;
+}
 .social-links a img {
     width: 24px;
     height: 24px;
-}
+} 
 
 @media (min-width: 768px) {
     header h1 {
@@ -289,9 +430,31 @@ footer p {
         height: 200px;
         margin-right: 2rem;
     }
+    .comparison-container {
+        flex-direction: row;
+    }
+
+    .comparison-box {
+        margin: 0 1rem;
+    }
+    .feedback-card {
+        padding: 2rem;
+    }
+
+    .feedback-card:hover {
+        transform: translateY(-10px);
+    }
+    .contact-footer-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-box, .footer-box {
+        flex: 1;
+        margin: 0 1rem;
+    }
 }
-/* Add this CSS to your existing stylesheet */
-/* Feedback Section */
+
 .feedback-section {
     margin-top: 2rem;
     text-align: center;
@@ -300,9 +463,9 @@ footer p {
 .feedback-card {
     background: var(--light-color);
     color: var(--dark-color);
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 1rem auto;
-    border-radius: 10px;
+    border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     position: relative;
@@ -325,18 +488,37 @@ footer p {
 
 .feedback-name {
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 	1rem;
     font-style: italic;
     text-align: right;
     color: var(--secondary-color);
 }
-
-@media (min-width: 768px) {
-    .feedback-card {
-        padding: 2rem;
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
     }
 
-    .feedback-card:hover {
-        transform: translateY(-10px);
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        background: var(--secondary-color);
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    nav ul.active {
+        left: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .feedback-name {
+        margin-top: 1rem;
+        font-size: 0.8rem;
     }
 }
