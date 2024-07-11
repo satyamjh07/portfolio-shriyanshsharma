@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const welcomeMessage = 'Welcome to UNbound';
+    const welcomeMessage = 'Welcome to Prodigy-Hub';
     const welcomeElement = document.getElementById('welcome-message');
 
     function typeMessage(message, element) {
