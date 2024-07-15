@@ -286,6 +286,7 @@ th:first-child, td:first-child {
     background: linear-gradient(to left, #ffabab, #adffff);
     width: 90%;
     margin-left: 5%;
+    border-radius: 2em;
 }
 .accordion {
   color: #000000;
@@ -296,8 +297,9 @@ th:first-child, td:first-child {
   outline: none;
   font-size: 1rem;
   transition: 1s;
+  width: 100%;
+  background: linear-gradient(to left, #ffabab, #adffff);
 }
-
 .active, .accordion:hover {
   background-color: #ccc; 
 }
