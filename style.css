@@ -310,7 +310,7 @@ th:first-child, td:first-child {
   display: none;
   background: white;
   overflow: hidden;
-  width: 90%;
+  width: 100%;
   margin-left: 5%;
 }
 .contact-footer-section {
