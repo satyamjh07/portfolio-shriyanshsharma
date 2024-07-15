@@ -305,13 +305,12 @@ th:first-child, td:first-child {
 }
 
 .panel {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
   padding: 0 18px;
   display: none;
   background: white;
   overflow: hidden;
   width: 100%;
-  margin-left: 5%;
 }
 .contact-footer-section {
     display: flex;
