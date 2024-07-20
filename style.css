@@ -236,9 +236,81 @@ ul li::before {
     color: var(--dark-color);
 }
 
-.offer-banner {
+.limited-period-offers-section {
+    background: black;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+.limited-period-offers-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.offer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.offer-box {
     background: linear-gradient(135deg, #ffabab, #adffff);
-    color: #000;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.offer-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.offer-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+}
+
+.offer-box h3 i {
+    margin-right: 0.5rem;
+}
+
+.offer-box p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+}
+
+.offer-box .btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--light-color);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.offer-box .btn:hover {
+    background: #c0392b; /* Darker shade of accent color */
+    transform: scale(1.05);
+}
+
+.offer-banner {
+    background: black;
+    color: white;
     padding: 1.5rem;
     text-align: center;
     border-radius: 10px;
@@ -256,9 +328,7 @@ ul li::before {
 .offer-banner strong {
     color: var(--accent-color);
 }
-a {
-    text-decoration: none;
-}
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -270,6 +340,7 @@ a {
         transform: scale(1);
     }
 }
+
 
 @media (max-width: 768px) {
     .offer-banner {
