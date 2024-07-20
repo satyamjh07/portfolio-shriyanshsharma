@@ -117,3 +117,9 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+function scrollToContact() {
+    const contactSection = document.querySelector('#contact');
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
